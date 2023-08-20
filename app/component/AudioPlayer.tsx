@@ -1,13 +1,6 @@
 import pauseButton from "~/resources/pause-button.png";
 import playButton from "~/resources/play-button.png";
-import { APIResponse } from "~/types/api.types";
-
-interface AudioPlayerTypes{
-    playing:Boolean,
-    toggleAudio:()=>void,
-    audioRef:React.MutableRefObject<HTMLAudioElement | null>,
-    result:APIResponse[]
-}
+import { AudioPlayerTypes } from "~/types/audioPlayer.types";
 
 export default function AudioPlayer({playing,toggleAudio,audioRef,result}:AudioPlayerTypes) {
     
