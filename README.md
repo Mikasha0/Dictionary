@@ -10,7 +10,6 @@ A front end webpage that uses dictionaryapi. Lets users search words and in retu
 npm install
 ```
 
-This install all the 
 ## Development
 
 From your terminal:
