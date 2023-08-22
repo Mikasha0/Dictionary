@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import pauseButton from "~/resources/pause-button.png";
-import playButton from "~/resources/play-button.png";
 import { APIResponse, Definition, Meaning } from "~/types/api.types";
-import { OutputTabType } from "~/types/outputTab.types";
-import NormalButton from "./NormalButton";
 import { btnType } from "~/types/normalButton.types";
+import { OutputTabType } from "~/types/outputTab.types";
 import AudioPlayer from "./AudioPlayer";
+import NormalButton from "./NormalButton";
 
 export default function OutputTab({ result }: OutputTabType) {
   const [verbValueData, setVerbVAlueData] = useState<Definition[]>([]);
@@ -42,23 +40,12 @@ export default function OutputTab({ result }: OutputTabType) {
         <div className="mt-4 flex flex-col">
           {result.length !== 0 && (
             <>
-              {/* <div className="mt-4 flex">
-                <button type="button" onClick={toggleAudio}>
-                  <img
-                    className={`w-[61px] h-[61px]`}
-                    src={playing ? pauseButton : playButton}
-                    alt={playing ? "pause-button" : "play-button"}
-                  />
-                </button>
-                <audio ref={audioRef} style={{ display: "none" }}>
-                  <source
-                    src={`${result[0]?.phonetics[0].audio}`}
-                    type="audio/mpeg"
-                  />
-                </audio>
-                <p className="mt-4 ml-3">{result[0]?.phonetic}</p>
-          </div> */}
-              <AudioPlayer playing={playing} audioRef={audioRef} toggleAudio={toggleAudio} result={result}/>
+              <AudioPlayer
+                playing={playing}
+                audioRef={audioRef}
+                toggleAudio={toggleAudio}
+                result={result}
+              />
               <div className="flex mt-5">
                 <NormalButton
                   btnName="noun"

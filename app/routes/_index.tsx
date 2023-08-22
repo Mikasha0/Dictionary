@@ -10,8 +10,6 @@ export const meta: V2_MetaFunction = () => {
   ];
 };
 
-// export const loader = async(args:LoaderArgs) => getSearchedName(args);
-
 export default function Index() {
   return (
     <>

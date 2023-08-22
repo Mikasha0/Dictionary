@@ -1,6 +1,6 @@
-  import { ChangeEvent, useState } from "react";
-import ResultTab from "./OutputTab";
+import { ChangeEvent, useState } from "react";
 import { APIError, APIResponse } from "~/types/api.types";
+import ResultTab from "./OutputTab";
   export default function SearchInputForm() {
     const [search, setSearch] = useState<string>("");
     const [valueNotFound, setValueNotFound] = useState("");
@@ -20,7 +20,6 @@ import { APIError, APIResponse } from "~/types/api.types";
             const searchedValue:APIError = await res.json();
             setValueNotFound(searchedValue.message);
             setResult([])
-            console.log(searchedValue);
           } else {
             const searchResult:APIResponse[] = await res.json();
             setValueNotFound("");
