@@ -1,6 +1,14 @@
-# Welcome to Remix!
+# Dictionary
 
-- [Remix Docs](https://remix.run/docs)
+## Description
+
+A front end webpage that uses dictionaryapi. Lets users search words and in return shows noun, verb & phonetic of the searched word. Also plays the audio of the selected word.
+
+## Installation 
+
+```sh
+npm install
+```
 
 ## Development
 
@@ -56,3 +64,8 @@ rm -rf app
 # copy your app over
 cp -R ../my-old-remix-app/app app
 ```
+
+
+## Stay in touch
+
+- Author -[Aniket Tamrakar](https://github.com/Mikasha0)
